@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""PitchGraph browser-based QA — render a deck with Playwright (headless Chromium).
+"""PitchCraft browser-based QA — render a deck with Playwright (headless Chromium).
 
 Two render paths:
   * .pptx  -> LibreOffice converts to PDF (conversion only), then pdf.js renders each
              page to a canvas *inside Chromium* and Playwright screenshots it.
   * .html  -> each slide HTML is loaded and screenshotted directly (perfect fidelity).
 
-Outputs per-slide PNGs + a contact_sheet.png. The pitchgraph-browser-qa agent then
+Outputs per-slide PNGs + a contact_sheet.png. The pitchcraft-browser-qa agent then
 reads the images and prescribes fixes. Falls back to pdftoppm if Playwright is absent.
 
 Usage:
@@ -184,7 +184,7 @@ def main(argv):
     contact_sheet(pngs, out / "contact_sheet.png")
     print(f"QA render [{mode}]: {len(pngs)} slides -> {out}/")
     print(f"Contact sheet: {out / 'contact_sheet.png'}")
-    print("-> pitchgraph-browser-qa agent: read the PNGs and inspect each slide.")
+    print("-> pitchcraft-browser-qa agent: read the PNGs and inspect each slide.")
     return 0
 
 

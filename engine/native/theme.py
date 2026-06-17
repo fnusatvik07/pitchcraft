@@ -1,4 +1,4 @@
-"""Theme token loader for PitchGraph.
+"""Theme token loader for PitchCraft.
 
 A *theme* is a pure-data JSON file in `themes/<name>.json`. This module loads it
 into a typed `Theme` object that every layout function reads from. No colors,

@@ -1,12 +1,12 @@
-# PitchGraph
+# PitchCraft
 
 Turn a topic or a URL into a visually striking, story-first presentation. Real `.pptx` plus PDF, not generic AI bullet slides.
 
-PitchGraph writes a narrative first, then designs each slide for its moment. It can pull the real diagrams, screenshots, and code from a source page, generate architecture diagrams, theme dark or light or your brand, and check its own output for slop, missing citations, and overflow. It also ships an editable companion deck for when you need to change text in PowerPoint.
+PitchCraft writes a narrative first, then designs each slide for its moment. It can pull the real diagrams, screenshots, and code from a source page, generate architecture diagrams, theme dark or light or your brand, and check its own output for slop, missing citations, and overflow. It also ships an editable companion deck for when you need to change text in PowerPoint.
 
 Built as a Claude Code plugin. You drive it with `/deck <topic or url>`.
 
-![PitchGraph sample slides](docs/screenshots/00-banner.png)
+![PitchCraft sample slides](docs/screenshots/00-banner.png)
 
 ## What the slides look like
 
@@ -22,8 +22,8 @@ Built as a Claude Code plugin. You drive it with `/deck <topic or url>`.
 ## Install in Claude Code
 
 ```text
-/plugin marketplace add fnusatvik07/pitchgraph
-/plugin install pitchgraph@pitchgraph
+/plugin marketplace add fnusatvik07/pitchcraft
+/plugin install pitchcraft@pitchcraft
 ```
 
 Then build a deck:
@@ -39,8 +39,8 @@ The first run installs the local runtime for you (a Python virtualenv, a headles
 ## Install standalone (any terminal)
 
 ```bash
-git clone https://github.com/fnusatvik07/pitchgraph.git
-cd pitchgraph
+git clone https://github.com/fnusatvik07/pitchcraft.git
+cd pitchcraft
 bash setup.sh
 .venv/bin/python engine/html_to_pptx.py examples/four-day-week out/Example.pptx
 .venv/bin/python engine/export.py pdf out/Example.pptx

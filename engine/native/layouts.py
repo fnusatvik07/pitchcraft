@@ -1,4 +1,4 @@
-"""The nine native layout builders for PitchGraph.
+"""The nine native layout builders for PitchCraft.
 
 Every builder has the signature `(slide, content, theme, ctx) -> None` and reads
 ALL styling from `theme` -- never a hardcoded color/font/size. `ctx` carries

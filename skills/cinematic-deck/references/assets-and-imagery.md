@@ -8,7 +8,7 @@ Pulls real `<img>` diagrams, screenshots large inline SVGs, captures code blocks
 full-page reference. Read `capture/manifest.json` and copy the assets worth featuring into the
 deck's `assets/`. Real source diagrams/screenshots are the strongest visuals — prefer them.
 
-Also run `pitchgraph-web-researcher` for cited facts/stats when the topic needs numbers; every
+Also run `pitchcraft-web-researcher` for cited facts/stats when the topic needs numbers; every
 stat/chart slide must carry a `.src` citation.
 
 ## Dark code windows (don't paste light screenshots)
@@ -40,7 +40,7 @@ For hero/section beats with no real asset, you MAY generate one — but only if 
   image API key (e.g. OpenAI). If not, I'll use drawn motifs and captured assets." Always deliver
   either way.
 - **Configure the key:** set `OPENAI_API_KEY` in the env, or write a git-ignored
-  `$DF/.pitchgraph.local.json` = `{"OPENAI_API_KEY":"sk-..."}`.
+  `$DF/.pitchcraft.local.json` = `{"OPENAI_API_KEY":"sk-..."}`.
 - **Generate:**
   `py "$DF/engine/gen_image.py" "<cinematic, on-topic prompt>" "$DF/out/<deck>/assets/hero.png"`
   Exits 3 with no key → just skip and fall back to motifs (the deck still ships).

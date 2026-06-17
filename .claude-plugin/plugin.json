@@ -1,10 +1,10 @@
 {
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
-  "name": "pitchgraph",
+  "name": "pitchcraft",
   "version": "1.0.0",
   "description": "Turn a topic or a URL into a visually stunning, story-first presentation (.pptx + PDF). Captures real diagrams/screenshots/code from a source, generates architecture diagrams, themes (dark/light/brand), checks for slop & overflow, and ships an editable companion. Not generic AI slides.",
   "author": { "name": "Satvik" },
-  "homepage": "https://github.com/fnusatvik07/pitchgraph",
+  "homepage": "https://github.com/fnusatvik07/pitchcraft",
   "keywords": ["pptx", "powerpoint", "slides", "deck", "presentation", "cinematic", "keynote", "diagrams"],
   "commands": ["./commands/deck.md"],
   "skills": ["./skills/cinematic-deck"]

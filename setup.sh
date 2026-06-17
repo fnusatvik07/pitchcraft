@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# PitchGraph setup — run once on a fresh machine. Idempotent.
+# PitchCraft setup — run once on a fresh machine. Idempotent.
 #   bash setup.sh
 set -euo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 VENV="$HERE/.venv"
 
-echo "PitchGraph setup"
+echo "PitchCraft setup"
 echo "  root: $HERE"
 
 # 1) pick a stable Python (3.14 is flaky for python-pptx/lxml)

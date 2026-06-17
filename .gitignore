@@ -3,7 +3,7 @@
 out/
 **/__pycache__/
 *.pyc
-.pitchgraph.local.json
+.pitchcraft.local.json
 .DS_Store
 examples/**/slide-*.png
 examples/**/_editable_brief.json
