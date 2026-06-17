@@ -1,4 +1,4 @@
-/* DeckForge — Cinematic design system v2. Story-first, slop-free, CONSISTENT.
+/* PitchGraph — Cinematic design system v2. Story-first, slop-free, CONSISTENT.
    Rule: never set font-size/margins inline on a slide. Use the scale classes only.
    That single rule is what fixes "some things big, some small". */
 /* Curated default pairing (rendered into the image = embedded). Override --display/--body

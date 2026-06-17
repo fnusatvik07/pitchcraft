@@ -3,7 +3,7 @@
 out/
 **/__pycache__/
 *.pyc
-.deckforge.local.json
+.pitchgraph.local.json
 .DS_Store
 examples/**/slide-*.png
 examples/**/_editable_brief.json

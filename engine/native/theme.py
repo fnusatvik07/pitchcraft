@@ -1,4 +1,4 @@
-"""Theme token loader for DeckForge.
+"""Theme token loader for PitchGraph.
 
 A *theme* is a pure-data JSON file in `themes/<name>.json`. This module loads it
 into a typed `Theme` object that every layout function reads from. No colors,

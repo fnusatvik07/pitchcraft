@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""DeckForge export — turn a finished .pptx into deliverables. Engine-agnostic
+"""PitchGraph export — turn a finished .pptx into deliverables. Engine-agnostic
 (works for every build path).
 
   pdf      <deck.pptx> [out.pdf]                 -> PDF (LibreOffice)
@@ -92,7 +92,7 @@ def handout(deck: Path, out: Path | None, cols: int = 2, rows: int = 3) -> Path:
 
 
 def main(argv):
-    ap = argparse.ArgumentParser(description="DeckForge export")
+    ap = argparse.ArgumentParser(description="PitchGraph export")
     sub = ap.add_subparsers(dest="cmd", required=True)
     p1 = sub.add_parser("pdf"); p1.add_argument("deck"); p1.add_argument("out", nargs="?")
     p2 = sub.add_parser("handout"); p2.add_argument("deck"); p2.add_argument("out", nargs="?")

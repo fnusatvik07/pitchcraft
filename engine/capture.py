@@ -22,7 +22,7 @@ import sys
 import urllib.request
 from pathlib import Path
 
-UA = {"User-Agent": "DeckForge/visual (+deck asset capture)"}
+UA = {"User-Agent": "PitchGraph/visual (+deck asset capture)"}
 
 
 def capture(url: str, outdir: Path, max_code=6, max_img=12) -> dict:

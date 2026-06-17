@@ -5,7 +5,7 @@ OFF by default. The skill ASKS the user whether they want generated imagery; if
 yes, it uses their API key. With no key the whole feature is skipped and the deck
 still renders (drawn motifs / captured assets).
 
-Key resolution order: --key arg  ->  $OPENAI_API_KEY  ->  deckforge/.deckforge.local.json
+Key resolution order: --key arg  ->  $OPENAI_API_KEY  ->  pitchgraph/.pitchgraph.local.json
 {"OPENAI_API_KEY": "sk-..."}.  Returns exit code 3 when no key (caller falls back).
 
 Usage:
@@ -29,7 +29,7 @@ def resolve_key(cli_key=None):
         return cli_key
     if os.environ.get("OPENAI_API_KEY"):
         return os.environ["OPENAI_API_KEY"]
-    cfg = ROOT / ".deckforge.local.json"
+    cfg = ROOT / ".pitchgraph.local.json"
     if cfg.exists():
         try:
             return json.loads(cfg.read_text()).get("OPENAI_API_KEY")

@@ -1,4 +1,4 @@
-"""Asset fetching + native embedding for DeckForge.
+"""Asset fetching + native embedding for PitchGraph.
 
 - place_image(): embed a local image as a NATIVE picture shape, center-cropped to
   the target region. Never rasterizes the whole slide.
@@ -43,7 +43,7 @@ def _resolve(path, base_dir: Path | None = None) -> Path | None:
     return None
 ICONIFY = "https://api.iconify.design/{prefix}/{name}.svg"
 OPENVERSE = "https://api.openverse.org/v1/images/"
-UA = {"User-Agent": "DeckForge/1.0 (+workshop deck generator)"}
+UA = {"User-Agent": "PitchGraph/1.0 (+workshop deck generator)"}
 
 
 # --------------------------------------------------------------------------- #

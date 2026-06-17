@@ -1,4 +1,4 @@
-"""The nine native layout builders for DeckForge.
+"""The nine native layout builders for PitchGraph.
 
 Every builder has the signature `(slide, content, theme, ctx) -> None` and reads
 ALL styling from `theme` -- never a hardcoded color/font/size. `ctx` carries

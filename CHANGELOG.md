@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to DeckForge are documented here. This project uses
+All notable changes to PitchGraph are documented here. This project uses
 [Semantic Versioning](https://semver.org).
 
 ## [1.0.0] 2026-06-17
@@ -26,4 +26,4 @@ First public release.
 * Optional AI hero images using your own image API key, with graceful fallback.
 * A self contained example deck and a one command `setup.sh`.
 
-[1.0.0]: https://github.com/fnusatvik07/deckforge/releases/tag/v1.0.0
+[1.0.0]: https://github.com/fnusatvik07/pitchgraph/releases/tag/v1.0.0
