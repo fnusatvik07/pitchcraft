@@ -1,0 +1,36 @@
+{
+  "name": "pitch",
+  "palette": {
+    "bg": "0B0E1A",
+    "ink": "F5F7FF",
+    "muted": "9AA3C0",
+    "primary": "6C5CE7",
+    "accent": "00E0B8",
+    "surface": "151A2E",
+    "line": "262C45",
+    "good": "2ECC71",
+    "warn": "FF6B6B"
+  },
+  "fonts": {
+    "display": "Verdana",
+    "body": "Verdana",
+    "mono": "Consolas"
+  },
+  "type_scale": { "title": 46, "h2": 28, "body": 17, "caption": 11, "stat": 88 },
+  "layout": {
+    "margin_in": 0.7,
+    "gutter_in": 0.35,
+    "title_align": "left",
+    "bullet_char": "▸",
+    "section_style": "fullbleed",
+    "corner_radius_pt": 10
+  },
+  "chart_style": {
+    "type_default": "COLUMN",
+    "gridlines": false,
+    "series": ["accent", "primary", "muted"]
+  },
+  "voice": "punchy, momentum-driven; bold claims backed by one number each",
+  "image_treatment": "none",
+  "template": null
+}

@@ -1,0 +1,36 @@
+{
+  "name": "creative",
+  "palette": {
+    "bg": "FFF8F0",
+    "ink": "1B1430",
+    "muted": "7A6E8F",
+    "primary": "FF3D7F",
+    "accent": "7C4DFF",
+    "surface": "FCEAF1",
+    "line": "F2D6E2",
+    "good": "12B886",
+    "warn": "F76707"
+  },
+  "fonts": {
+    "display": "Trebuchet MS",
+    "body": "Trebuchet MS",
+    "mono": "Consolas"
+  },
+  "type_scale": { "title": 52, "h2": 30, "body": 17, "caption": 11, "stat": 96 },
+  "layout": {
+    "margin_in": 0.7,
+    "gutter_in": 0.35,
+    "title_align": "left",
+    "bullet_char": "✦",
+    "section_style": "fullbleed",
+    "corner_radius_pt": 14
+  },
+  "chart_style": {
+    "type_default": "COLUMN",
+    "gridlines": false,
+    "series": ["primary", "accent", "good"]
+  },
+  "voice": "energetic, expressive, vivid imagery; short punchy lines",
+  "image_treatment": "none",
+  "template": null
+}

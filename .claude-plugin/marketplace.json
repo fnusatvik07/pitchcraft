@@ -1,0 +1,15 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "deckforge",
+  "description": "DeckForge — cinematic, story-first presentation generation for Claude Code.",
+  "owner": { "name": "Satvik", "url": "https://github.com/fnusatvik07" },
+  "plugins": [
+    {
+      "name": "deckforge",
+      "description": "Turn a topic or URL into a visually stunning, story-first .pptx (+ PDF + editable companion). Real captured assets, generated diagrams, dark/light/brand themes, slop & overflow guardrails.",
+      "author": { "name": "Satvik" },
+      "category": "productivity",
+      "source": "./"
+    }
+  ]
+}

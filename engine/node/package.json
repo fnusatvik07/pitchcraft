@@ -1,0 +1,10 @@
+{
+  "name": "deckforge-engine",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Browser-side deps for DeckForge: Mermaid (diagrams) and pdf.js (QA render).",
+  "dependencies": {
+    "mermaid": "^11.15.0",
+    "pdfjs-dist": "^4.10.38"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "corporate",
+  "palette": {
+    "bg": "FFFFFF",
+    "ink": "1A2233",
+    "muted": "5B6472",
+    "primary": "0B5FFF",
+    "accent": "00B8A9",
+    "surface": "F4F6FA",
+    "line": "DAE0EA",
+    "good": "1F9D55",
+    "warn": "D9480F"
+  },
+  "fonts": {
+    "display": "Arial",
+    "body": "Arial",
+    "mono": "Consolas"
+  },
+  "type_scale": { "title": 40, "h2": 26, "body": 16, "caption": 11, "stat": 72 },
+  "layout": {
+    "margin_in": 0.7,
+    "gutter_in": 0.35,
+    "title_align": "left",
+    "bullet_char": "—",
+    "section_style": "band",
+    "corner_radius_pt": 6
+  },
+  "chart_style": {
+    "type_default": "COLUMN",
+    "gridlines": false,
+    "series": ["primary", "accent", "muted"]
+  },
+  "voice": "precise, executive, low-adjective; lead with the takeaway, then evidence",
+  "image_treatment": "none",
+  "template": null
+}

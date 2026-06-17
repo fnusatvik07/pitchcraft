@@ -1,0 +1,132 @@
+/* DeckForge — Cinematic design system v2. Story-first, slop-free, CONSISTENT.
+   Rule: never set font-size/margins inline on a slide. Use the scale classes only.
+   That single rule is what fixes "some things big, some small". */
+/* Curated default pairing (rendered into the image = embedded). Override --display/--body
+   per deck for a brand font. Loaded from Google Fonts at render time. */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+:root{
+  --bg:#080b18; --bg2:#0c1024; --ink:#f6f8ff; --muted:#9aa3c6;
+  --primary:#7c5cff; --accent:#00e0b8; --surface:#161d38; --line:rgba(255,255,255,.12);
+  --card:#ffffff; --display:'Space Grotesk','Helvetica Neue',Arial,sans-serif; --body:'Inter','Helvetica Neue',Arial,sans-serif;
+  --grad-from:#ffffff;  /* display-heading gradient start (dark theme) */
+  /* LOCKED type scale (1920x1080) */
+  --t-eyebrow:26px; --t-hero:172px; --t-h1:108px; --t-h2:72px; --t-h3:38px;
+  --t-lead:36px; --t-body:29px; --t-meta:22px; --t-stat:360px; --t-code:19px;
+  /* spacing */
+  --pad:120px; --gap:34px; --stack:24px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1920px;height:1080px;overflow:hidden;font-family:var(--body);-webkit-font-smoothing:antialiased}
+.slide{width:1920px;height:1080px;position:relative;color:var(--ink);overflow:hidden;
+  background:radial-gradient(1300px 900px at 84% -14%,color-mix(in srgb,var(--primary) 40%,transparent),transparent 60%),
+             radial-gradient(1100px 800px at 0% 116%,color-mix(in srgb,var(--accent) 26%,transparent),transparent 56%),
+             linear-gradient(135deg,var(--bg),var(--bg2) 55%,var(--bg))}
+.pad{position:absolute;inset:0;padding:var(--pad);display:flex;flex-direction:column;z-index:2}
+.center{justify-content:center}
+.spread{justify-content:space-between}
+/* motifs (generated visuals — cohesive across the deck) */
+.nodes{position:absolute;inset:0;width:100%;height:100%;opacity:.5;z-index:1;pointer-events:none}
+.grid-motif{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:96px 96px;-webkit-mask-image:radial-gradient(1200px 700px at 70% 30%,#000,transparent 75%);
+          mask-image:radial-gradient(1200px 700px at 70% 30%,#000,transparent 75%)}
+/* TYPOGRAPHY — scale only, never inline */
+.eyebrow{font-size:var(--t-eyebrow);letter-spacing:.36em;font-weight:800;text-transform:uppercase;color:var(--accent);margin-bottom:var(--stack)}
+.display{font-family:var(--display);font-weight:800;letter-spacing:-.03em;line-height:.97;
+  background:linear-gradient(95deg,var(--grad-from) 14%,var(--primary) 58%,var(--accent));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.plain{font-family:var(--display);font-weight:800;letter-spacing:-.025em;line-height:1.02;color:var(--ink)}
+.hero{font-size:var(--t-hero)} .h1{font-size:var(--t-h1)} .h2{font-size:var(--t-h2)}
+.lead{font-size:var(--t-lead);color:var(--muted);line-height:1.42;max-width:1500px;margin-top:var(--stack)}
+.lead b{color:var(--ink);font-weight:600}
+.meta{font-size:var(--t-meta);color:var(--muted);line-height:1.7}
+.rule{height:6px;width:112px;border-radius:6px;background:linear-gradient(90deg,var(--primary),var(--accent));margin-top:36px}
+.stat{font-family:var(--display);font-weight:800;letter-spacing:-.04em;line-height:.9;font-size:var(--t-stat);
+  background:linear-gradient(120deg,var(--primary),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.src{position:absolute;right:var(--pad);bottom:58px;font-size:var(--t-meta);color:#727aa3;font-style:italic;z-index:3}
+.logo{height:46px;opacity:.95}
+/* CONTENT COMPONENTS (replace bullet lists) */
+.flow1{margin-top:auto} /* push content toward vertical balance */
+.grid{display:grid;gap:var(--gap);margin-top:40px}
+.cols-2{grid-template-columns:1fr 1fr}.cols-3{grid-template-columns:repeat(3,1fr)}.cols-4{grid-template-columns:repeat(4,1fr)}
+.split{display:grid;grid-template-columns:1.05fr 1fr;gap:72px;align-items:center;flex:1;margin-top:40px}
+.feature{background:var(--surface);border-radius:22px;padding:38px;border-top:5px solid var(--accent)}
+.feature.alt{border-top-color:var(--primary)}
+.feature .ic{height:48px;display:flex;align-items:center}
+.feature .ic svg{width:46px;height:46px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+/* full-bleed generated/photographic image with legibility scrim */
+.bleed{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.scrim{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(90deg,color-mix(in srgb,var(--bg) 94%,transparent) 0%,color-mix(in srgb,var(--bg) 70%,transparent) 44%,color-mix(in srgb,var(--bg) 24%,transparent) 100%)}
+.figcap{font-size:var(--t-meta);color:var(--muted);margin-top:14px;align-self:center}
+.feature h3{font-family:var(--display);font-size:var(--t-h3);font-weight:800;margin:16px 0 10px;color:var(--ink)}
+.feature p{font-size:var(--t-body);color:var(--muted);line-height:1.4}
+.deflist{display:grid;grid-template-columns:auto 1fr;column-gap:44px;row-gap:26px}
+.deflist .t{font-family:ui-monospace,Menlo,monospace;font-size:var(--t-body);color:var(--accent);font-weight:600;white-space:nowrap}
+.deflist .d{font-size:var(--t-body);color:var(--ink);align-self:center}
+/* real captured assets */
+.card{background:var(--card);border-radius:22px;padding:26px 30px;box-shadow:0 44px 100px rgba(0,0,0,.55);align-self:center}
+.card img{display:block;max-width:100%;max-height:560px;border-radius:6px}
+.codewin{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 44px 110px rgba(0,0,0,.6)}
+.codewin .bar{height:50px;background:#eef1f7;display:flex;align-items:center;gap:9px;padding:0 22px;border-bottom:1px solid #e2e6ef}
+.codewin .bar i{width:13px;height:13px;border-radius:50%}
+.codewin .bar .r{background:#ff5f57}.codewin .bar .y{background:#febc2e}.codewin .bar .g{background:#28c840}
+.codewin .bar .fn{margin-left:12px;color:#8a93a6;font-size:var(--t-meta);font-family:ui-monospace,Menlo,monospace}
+.codewin img{display:block;width:100%}
+/* pre-rendered dark code image (own window chrome) — height-capped so it never overflows */
+.codeimg{display:block;max-width:100%;max-height:640px;align-self:center}
+/* generated Mermaid diagram (transparent PNG) — height-capped, centered */
+.diagram{display:block;width:100%;max-height:680px;object-fit:contain;align-self:center;margin-top:30px}
+/* gradient bar chart */
+.chart{display:flex;align-items:flex-end;gap:72px;flex:1;margin-top:40px;padding:0 40px 20px}
+.chart .col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.chart .cbar{width:72%;border-radius:16px 16px 0 0;background:linear-gradient(180deg,var(--primary),var(--accent));min-height:8px}
+.chart .clab{font-family:var(--display);font-size:var(--t-h3);font-weight:800;margin-top:22px}
+.chart .csub{font-size:var(--t-meta);color:var(--muted);margin-top:6px;text-align:center;line-height:1.35}
+
+/* ---- INTERNATIONAL (non-Latin scripts: Devanagari, CJK, Arabic, etc.) ----
+   Letter-spacing + uppercase break complex scripts (separates matras / conjuncts).
+   Add `intl` to the slide and load the script's Noto font into --display/--body. */
+.slide.intl .eyebrow{letter-spacing:.06em;text-transform:none}
+.slide.intl .display,.slide.intl .plain,.slide.intl .h1,.slide.intl .h2,.slide.intl .hero{letter-spacing:0}
+.slide.intl[dir="rtl"] .pad{direction:rtl}
+.slide.intl[dir="rtl"] .src{right:auto;left:var(--pad)}
+
+/* ---- LIGHT theme variant (corporate / bright audiences) ---- */
+.slide.light{--bg:#f5f7fc;--bg2:#e9eef9;--ink:#121829;--muted:#51596e;--surface:#ffffff;
+  --line:rgba(18,24,41,.10);--card:#ffffff;--grad-from:#1b2233}  /* gradient starts dark on light */
+.slide.light .feature{box-shadow:0 18px 50px rgba(20,30,60,.10)}
+.slide.light .card,.slide.light .codewin{box-shadow:0 30px 70px rgba(20,30,60,.16)}
+
+/* ---- ASSET-POOR layouts (rich without photos) ---- */
+/* big number grid */
+.statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:64px;flex:1;align-content:center;margin-top:30px}
+.statgrid .num{font-family:var(--display);font-weight:800;letter-spacing:-.03em;font-size:150px;line-height:.9;
+  background:linear-gradient(120deg,var(--primary),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.statgrid .lab{font-size:var(--t-body);color:var(--muted);margin-top:16px;line-height:1.35;max-width:440px}
+/* editorial pull-quote */
+.pullquote{font-family:var(--display);font-weight:800;letter-spacing:-.02em;line-height:1.12;font-size:86px;max-width:1560px}
+.pullquote .by{display:block;font-size:var(--t-lead);font-weight:600;color:var(--muted);margin-top:40px;letter-spacing:0}
+/* horizontal timeline */
+.timeline{display:flex;flex:1;align-items:center;gap:0;margin-top:40px}
+.timeline .step{flex:1;position:relative;padding-right:30px}
+.timeline .step .dot{width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));box-shadow:0 0 18px color-mix(in srgb,var(--accent) 60%,transparent)}
+.timeline .step .line{position:absolute;top:10px;left:22px;right:0;height:3px;background:var(--line)}
+.timeline .step:last-child .line{display:none}
+.timeline .step .k{font-family:var(--display);font-size:var(--t-h3);font-weight:800;margin:26px 0 8px}
+.timeline .step .v{font-size:var(--t-body);color:var(--muted);line-height:1.4;padding-right:30px}
+/* numbered "manifesto" list (big statements, not dashed bullets) */
+.biglist{margin-top:30px}
+.biglist .row{display:grid;grid-template-columns:auto 1fr;column-gap:36px;align-items:baseline;padding:30px 0;border-bottom:1px solid var(--line)}
+.biglist .k{font-family:var(--display);font-weight:800;font-size:54px;line-height:1;
+  background:linear-gradient(120deg,var(--primary),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.biglist .v{font-size:var(--t-h3);color:var(--ink);font-weight:600}
+.biglist .v small{display:block;font-size:var(--t-body);color:var(--muted);font-weight:400;margin-top:6px}
+/* editorial data table (for genuinely tabular / comparison data) */
+.dtable{width:100%;border-collapse:collapse;margin-top:36px;font-size:var(--t-body)}
+.dtable th{text-align:left;font-family:var(--display);font-weight:800;color:var(--ink);
+  padding:22px 26px;border-bottom:2px solid var(--accent);font-size:var(--t-h3)}
+.dtable td{padding:22px 26px;color:var(--ink);border-bottom:1px solid var(--line)}
+.dtable tr td:first-child{color:var(--muted);font-family:ui-monospace,Menlo,monospace}
+.dtable tr:hover{background:var(--surface)}
+.dtable .hi{color:var(--accent);font-weight:700}  /* highlight a winning cell */

@@ -1,0 +1,36 @@
+{
+  "name": "academic",
+  "palette": {
+    "bg": "FBFAF7",
+    "ink": "1F1B16",
+    "muted": "6B645B",
+    "primary": "7A1F2B",
+    "accent": "2E6E8E",
+    "surface": "F0ECE4",
+    "line": "DAD3C6",
+    "good": "3F7A4F",
+    "warn": "B5651D"
+  },
+  "fonts": {
+    "display": "Georgia",
+    "body": "Georgia",
+    "mono": "Courier New"
+  },
+  "type_scale": { "title": 34, "h2": 22, "body": 15, "caption": 10, "stat": 60 },
+  "layout": {
+    "margin_in": 0.8,
+    "gutter_in": 0.4,
+    "title_align": "left",
+    "bullet_char": "•",
+    "section_style": "band",
+    "corner_radius_pt": 2
+  },
+  "chart_style": {
+    "type_default": "BAR",
+    "gridlines": true,
+    "series": ["primary", "accent", "muted"]
+  },
+  "voice": "rigorous, hedged, citation-first; define terms; never overclaim",
+  "image_treatment": "none",
+  "template": null
+}
